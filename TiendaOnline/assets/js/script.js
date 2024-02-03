@@ -2,8 +2,8 @@ function fClick() {
     alert("¡Bienvenido a Gorilla Shop!");
     window.location.href = 'index.html';
 }
-let urlFetchAll = "http://localhost:8085/apirest/familias/productos/";
-let urlPost = "http://localhost:8085/apirest/familias/productos/";
+// let urlFetchAll = "http://localhost:8085/apirest/familias/productos/";
+// let urlPost = "http://localhost:8085/apirest/familias/productos/";
 
 function fInicio() {
     fCargarTemas();
@@ -11,7 +11,8 @@ function fInicio() {
 
 function fCargarTemas() {
     let html = "";
-    fetch(urlFetchAll)
+    const URL = `php/servidor.php?peticion=cargar_datos` ;
+    fetch(URL)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`Error de red: ${response.statusText}`);
@@ -21,8 +22,8 @@ function fCargarTemas() {
         .then((productos) => {
             productos.forEach(producto => {
                 // Verificar si los campos necesarios están definidos
-                const imagen = producto.imagen ? producto.imagen : 'assets/IMG/';
-                const nombre = producto.nombre ? producto.nombre : 'Nombre no disponible';
+                const imagen = producto.marca ? producto.marca : 'assets/IMG/';
+                const nombre = producto.descripcion ? producto.descripcion : 'Nombre no disponible';
 
                 html += `<div>
                             <img src="${imagen}" alt="${nombre}">
