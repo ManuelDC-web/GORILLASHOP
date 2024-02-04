@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #141C29;
+    padding-top: 80px;
+    color: white;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 30px 0;
+    color: white;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#productosPorFamilia {
+    background-color: #fff;
+    color: black;
+    margin-top: 15%;
+    margin-left: 40%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto {
+    margin-bottom: 20px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+
+#cerrar {
+    background-color: #ff0000;
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+#cerrar:hover {
+    background-color: #990000; 
+}
+
+
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
